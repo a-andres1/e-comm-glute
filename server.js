@@ -1,6 +1,5 @@
 const express = require('express');
 const routes = require('./routes');
-const models = require('/models')
 const connection = require('./config/connection')
 // import sequelize connection
 
@@ -17,7 +16,7 @@ app.listen(PORT, () => {
   // clears out data and resets the table
   // creates tables based on models
   connection.sync({
-    force: true
+    force: false
   });
   console.log(`App listening on port ${PORT}!`);
 });
